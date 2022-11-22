@@ -1,0 +1,9 @@
+﻿@model dynamic
+@{
+    Layout = null;
+    var varsRenamed = ViewBag.resp;
+    if (!String.IsNullOrEmpty(varsRenamed))
+    {
+        @Html.Raw(varsRenamed);
+    }
+}

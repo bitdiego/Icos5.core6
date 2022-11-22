@@ -1,0 +1,7 @@
+﻿@using Icos5.core6.Models.General
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<OutOfRange>)Model;
+}@Html.Raw(myModel.MyString)

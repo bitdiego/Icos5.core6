@@ -1,0 +1,10 @@
+﻿@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<string>)Model;
+    if (!String.IsNullOrEmpty(myModel.MyString))
+    {
+        @Html.Raw("STO_CONFIG,STO_PROF_LEVEL" + Environment.NewLine);
+    }
+}@Html.Raw(myModel.MyString)

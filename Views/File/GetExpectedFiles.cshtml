@@ -1,0 +1,11 @@
+﻿@using Icos5.core6.Models.File
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<LoggerFile>)Model;
+    if (!String.IsNullOrEmpty(myModel.MyString))
+    {
+        @Html.Raw("LOGGER,FILE" + Environment.NewLine);
+    }
+}@Html.Raw(myModel.MyString)

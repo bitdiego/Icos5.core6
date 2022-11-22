@@ -1,0 +1,7 @@
+﻿@using Icos5.core6.Models.StringOptions
+@using IcosClassLibrary.Models
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<GRP_BM>)Model;
+}@Html.Raw(myModel.MyTitle)@Html.Raw(myModel.MyString)

@@ -1,0 +1,9 @@
+﻿@model dynamic
+@{
+    Layout = null;
+    var vpd = ViewBag.Resp;
+    if (!String.IsNullOrEmpty(vpd))
+    {
+        @Html.Raw(vpd);
+    }
+}

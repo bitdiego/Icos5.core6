@@ -1,0 +1,7 @@
+﻿@using Icos5.core6.Models.Sensors
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<Frequency>)Model;
+}@Html.Raw(myModel.MyString)

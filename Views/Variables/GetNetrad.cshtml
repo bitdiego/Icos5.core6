@@ -1,0 +1,9 @@
+﻿@model dynamic
+@{
+    Layout = null;
+    var netrad = ViewBag.Resp;
+    if (!String.IsNullOrEmpty(netrad))
+    {
+        @Html.Raw(netrad);
+    }
+}

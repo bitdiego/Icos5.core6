@@ -1,0 +1,11 @@
+﻿@using Icos5.core6.Models.Profile
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<VarProfileExt>)Model;
+    if (!String.IsNullOrEmpty(myModel.MyString))
+    {
+        @Html.Raw("BM_VARIABLE,BM_VARIABLE_H_V_R_ORIGINAL,BM_VARIABLE_H_V_R_RENAMED,BM_VAROUT,BM_HEIGHT,BM_DATE_START,BM_DATE_END" + Environment.NewLine);
+    }
+}@Html.Raw(myModel.MyString)

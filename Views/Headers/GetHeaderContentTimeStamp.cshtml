@@ -1,0 +1,11 @@
+﻿@using Icos5.core6.Models.Headers
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<HeaderInfo>)Model;
+    if (!String.IsNullOrEmpty(myModel.MyString))
+    {
+        @Html.Raw(myModel.MyString);
+    }
+}

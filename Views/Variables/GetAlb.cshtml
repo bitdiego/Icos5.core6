@@ -1,0 +1,9 @@
+﻿@model dynamic
+@{
+    Layout = null;
+    var alb = ViewBag.Resp;
+    if (!String.IsNullOrEmpty(alb))
+    {
+        @Html.Raw(alb);
+    }
+}

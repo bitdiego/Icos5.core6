@@ -1,0 +1,7 @@
+﻿@using Icos5.core6.Models.File
+@using Icos5.core6.Models.StringOptions
+@model dynamic
+@{
+    Layout = null;
+    var myModel = (MyStringify<Epox>)Model;
+}@Html.Raw(myModel.MyString)

@@ -1,7 +1,10 @@
 using Icos5.core6.DbManager;
 using Icos5.core6.Services;
+using Icos5.core6.Services.BmServices;
+using Icos5.core6.Services.Ec;
 using Icos5.core6.Services.FileServices;
 using Icos5.core6.Services.HeaderServices;
+using Icos5.core6.Services.KPlotServices;
 using Icos5.core6.Services.ProfileServices;
 using Icos5.core6.Services.SensorServices;
 using Icos5.core6.Services.StorageServices;
@@ -25,6 +28,9 @@ builder.Services.AddScoped<IStorageService, EFStorageService>();
 builder.Services.AddScoped<IVariableService, VariableService>();
 builder.Services.AddScoped<ISensorService, EFSensorService>();
 builder.Services.AddScoped<IProfileService, EFProfileService>();
+builder.Services.AddScoped<IKPlotService, EFKPlotService>();
+builder.Services.AddScoped<IBmService, EFBmService>();
+builder.Services.AddScoped<IEcServices, EFEcService>();
 
 var app = builder.Build();
 
